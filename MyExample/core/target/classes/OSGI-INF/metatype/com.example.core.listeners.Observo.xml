@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><metatype:MetaData xmlns:metatype="http://www.osgi.org/xmlns/metatype/v1.0.0" localization="OSGI-INF/metatype/com.example.core.listeners.Observo">
+    <OCD id="com.example.core.listeners.Observo" name="%com.example.core.listeners.Observo.name" description="%com.example.core.listeners.Observo.description">
+        <AD id="abc" type="String" name="%com.example.core.listeners.Observo.abc.name" description="%com.example.core.listeners.Observo.abc.description" cardinality="50"/>
+        <AD id="pqr" type="String" name="%com.example.core.listeners.Observo.pqr.name" description="%com.example.core.listeners.Observo.pqr.description"/>
+        <AD id="trues" type="String" name="%com.example.core.listeners.Observo.trues.name" description="%com.example.core.listeners.Observo.trues.description"/>
+    </OCD>
+    <Designate pid="com.example.core.listeners.Observo">
+        <Object ocdref="com.example.core.listeners.Observo"/>
+    </Designate>
+</metatype:MetaData>

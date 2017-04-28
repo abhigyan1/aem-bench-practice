@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><metatype:MetaData xmlns:metatype="http://www.osgi.org/xmlns/metatype/v1.0.0" localization="OSGI-INF/metatype/com.example.core.ConfigurationServiceImpl">
+    <OCD id="com.example.core.ConfigurationServiceImpl" name="%com.example.core.ConfigurationServiceImpl.name" description="%com.example.core.ConfigurationServiceImpl.description">
+        <AD id="abc" type="String" name="%com.example.core.ConfigurationServiceImpl.abc.name" description="%com.example.core.ConfigurationServiceImpl.abc.description" cardinality="50"/>
+        <AD id="pqr" type="String" name="%com.example.core.ConfigurationServiceImpl.pqr.name" description="%com.example.core.ConfigurationServiceImpl.pqr.description"/>
+        <AD id="trues" type="String" name="%com.example.core.ConfigurationServiceImpl.trues.name" description="%com.example.core.ConfigurationServiceImpl.trues.description"/>
+    </OCD>
+    <Designate pid="com.example.core.ConfigurationServiceImpl">
+        <Object ocdref="com.example.core.ConfigurationServiceImpl"/>
+    </Designate>
+</metatype:MetaData>

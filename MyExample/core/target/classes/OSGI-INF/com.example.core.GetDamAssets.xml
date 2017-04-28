@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><components xmlns:scr="http://www.osgi.org/xmlns/scr/v1.0.0">
+    <scr:component name="com.example.core.GetDamAssets">
+        <implementation class="com.example.core.GetDamAssets"/>
+        <service servicefactory="false">
+            <provide interface="com.example.core.GetDamAssets"/>
+        </service>
+        <property name="service.vendor" value="Adobe"/>
+        <property name="service.pid" value="com.example.core.GetDamAssets"/>
+    </scr:component>
+</components>

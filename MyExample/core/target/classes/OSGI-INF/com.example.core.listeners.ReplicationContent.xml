@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><components xmlns:scr="http://www.osgi.org/xmlns/scr/v1.0.0">
+    <scr:component name="com.example.core.listeners.ReplicationContent">
+        <implementation class="com.example.core.listeners.ReplicationContent"/>
+        <service servicefactory="false">
+            <provide interface="org.osgi.service.event.EventHandler"/>
+        </service>
+        <property name="event.topics" value="com/day/cq/replication"/>
+        <property name="service.vendor" value="Adobe"/>
+        <property name="service.pid" value="com.example.core.listeners.ReplicationContent"/>
+        <reference name="rrf" interface="org.apache.sling.api.resource.ResourceResolverFactory" cardinality="1..1" policy="static" bind="bindRrf" unbind="unbindRrf"/>
+        <reference name="queryBuilder" interface="com.day.cq.search.QueryBuilder" cardinality="1..1" policy="static" bind="bindQueryBuilder" unbind="unbindQueryBuilder"/>
+    </scr:component>
+</components>

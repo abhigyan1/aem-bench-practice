@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><components xmlns:scr="http://www.osgi.org/xmlns/scr/v1.0.0">
+    <scr:component name="com.example.core.UploadingAsset">
+        <implementation class="com.example.core.UploadingAsset"/>
+        <service servicefactory="false">
+            <provide interface="com.example.core.UploadingAsset"/>
+        </service>
+        <property name="service.vendor" value="Adobe"/>
+        <property name="service.pid" value="com.example.core.UploadingAsset"/>
+    </scr:component>
+</components>

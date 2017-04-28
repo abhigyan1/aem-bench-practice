@@ -1,0 +1,16 @@
+com\example\core\GetDamAssets.class
+com\example\core\UploadingAsset.class
+com\example\core\listeners\ReplicationContent.class
+com\example\core\schedulers\SimpleScheduledTask.class
+com\example\core\models\HelloWorldModel.class
+com\example\core\package-info.class
+com\example\core\WorkflowEx.class
+com\example\core\ConfigurationServiceImpl.class
+com\example\core\WorkflowProcess.class
+com\example\core\listeners\Observo.class
+com\example\core\CronJob.class
+com\example\core\listeners\SimpleResourceListener.class
+com\example\core\filters\LoggingFilter.class
+com\example\core\Searching.class
+com\example\core\ConfigurationService.class
+com\example\core\servlets\SimpleServlet.class
