@@ -77,14 +77,12 @@ public class ReplicationContent  implements EventHandler{
 				//GetDamAssets da = new GetDamAssets();
 				//da.getAsset(rrf);
 				UploadingAsset ua =new UploadingAsset();
-				ua.readFileFromDisk(rrf);
-
+				
+				//ua.uploadingSingleAsset(rrf);
+				ua.uploadingMultipleAsset(rrf);
 				session =rr.adaptTo(Session.class);
 				 
 			} catch (LoginException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			} catch (FileNotFoundException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
