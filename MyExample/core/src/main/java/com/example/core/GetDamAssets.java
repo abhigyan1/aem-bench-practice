@@ -68,7 +68,8 @@ public void getAsset(ResourceResolverFactory rrf) throws LoginException, PathNot
 	//String name = user.getName();
 
 	String x = asset.getMetadataValue("dam:Progressive");
-	Long z = asset.getLastModified();
+	asset.getMetadataValue("");
+	Long z = asset.getLastModified();	
 	
 	//Image image = null;
     

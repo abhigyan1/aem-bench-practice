@@ -13,4 +13,5 @@ com\example\core\listeners\SimpleResourceListener.class
 com\example\core\filters\LoggingFilter.class
 com\example\core\Searching.class
 com\example\core\ConfigurationService.class
+com\example\core\DamCustomization.class
 com\example\core\servlets\SimpleServlet.class
