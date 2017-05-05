@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><metatype:MetaData xmlns:metatype="http://www.osgi.org/xmlns/metatype/v1.0.0" localization="OSGI-INF/metatype/com.example.core.CronJob">
-    <OCD id="com.example.core.CronJob" name="%com.example.core.CronJob.name" description="%com.example.core.CronJob.description">
-        <AD id="scheduler.concurrent" type="Boolean" default="false" name="%com.example.core.CronJob.scheduler.concurrent.name" description="%com.example.core.CronJob.scheduler.concurrent.description"/>
-        <AD id="myParameter" type="String" name="%com.example.core.CronJob.myParameter.name" description="%com.example.core.CronJob.myParameter.description"/>
-    </OCD>
-    <Designate pid="com.example.core.CronJob">
-        <Object ocdref="com.example.core.CronJob"/>
-    </Designate>
-</metatype:MetaData>
