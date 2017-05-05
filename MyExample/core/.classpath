@@ -19,5 +19,8 @@
 	<classpathentry kind="var" path="M2_REPO/xerces/xercesImpl/2.6.2/xercesImpl-2.6.2.jar" sourcepath="M2_REPO/xerces/xercesImpl/2.6.2/xercesImpl-2.6.2-sources.jar"/>
 	<classpathentry kind="var" path="M2_REPO/xerces/xmlParserAPIs/2.6.2/xmlParserAPIs-2.6.2.jar"/>
 	<classpathentry kind="lib" path="C:/Users/acha71/Downloads/poi-3.7.jar"/>
+	<classpathentry kind="lib" path="C:/Users/acha71/Downloads/quartz-2.2.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/acha71/Downloads/slf4j-log4j12-1.7.5.jar"/>
+	<classpathentry kind="lib" path="C:/Users/acha71/Downloads/slf4j-api-1.7.5.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
