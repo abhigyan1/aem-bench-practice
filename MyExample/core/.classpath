@@ -22,5 +22,8 @@
 	<classpathentry kind="lib" path="C:/Users/acha71/Downloads/quartz-2.2.1.jar"/>
 	<classpathentry kind="lib" path="C:/Users/acha71/Downloads/slf4j-log4j12-1.7.5.jar"/>
 	<classpathentry kind="lib" path="C:/Users/acha71/Downloads/slf4j-api-1.7.5.jar"/>
+	<classpathentry kind="lib" path="D:/java-mail-1.4.4.jar"/>
+	<classpathentry kind="lib" path="D:/mail.jar"/>
+	<classpathentry kind="lib" path="D:/activation.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
