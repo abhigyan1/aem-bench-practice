@@ -3,6 +3,7 @@
   <classpathentry kind="src" path="src/test/java" output="target/test-classes" including="**/*.java"/>
   <classpathentry kind="src" path="src/main/java" including="**/*.java"/>
   <classpathentry kind="output" path="target/classes"/>
+  <classpathentry kind="var" path="M2_REPO/javax/inject/javax.inject/1/javax.inject-1.jar" sourcepath="M2_REPO/javax/inject/javax.inject/1/javax.inject-1-sources.jar"/>
   <classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
   <classpathentry kind="var" path="M2_REPO/org/apache/sling/org.apache.sling.junit.core/1.0.8/org.apache.sling.junit.core-1.0.8.jar" sourcepath="M2_REPO/org/apache/sling/org.apache.sling.junit.core/1.0.8/org.apache.sling.junit.core-1.0.8-sources.jar"/>
   <classpathentry kind="var" path="M2_REPO/org/apache/sling/org.apache.sling.commons.json/2.0.6/org.apache.sling.commons.json-2.0.6.jar" sourcepath="M2_REPO/org/apache/sling/org.apache.sling.commons.json/2.0.6/org.apache.sling.commons.json-2.0.6-sources.jar"/>
@@ -27,4 +28,15 @@
   <classpathentry kind="var" path="M2_REPO/org/slf4j/slf4j-simple/1.5.11/slf4j-simple-1.5.11.jar" sourcepath="M2_REPO/org/slf4j/slf4j-simple/1.5.11/slf4j-simple-1.5.11-sources.jar"/>
   <classpathentry kind="src" path="/MyExample.it.tests"/>
   <classpathentry kind="src" path="/MyExample.core"/>
+  <classpathentry kind="var" path="M2_REPO/org/apache/servicemix/bundles/org.apache.servicemix.bundles.solr-solrj/5.4.1_1/org.apache.servicemix.bundles.solr-solrj-5.4.1_1.jar" sourcepath="M2_REPO/org/apache/servicemix/bundles/org.apache.servicemix.bundles.solr-solrj/5.4.1_1/org.apache.servicemix.bundles.solr-solrj-5.4.1_1-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/codehaus/woodstox/stax2-api/3.1.4/stax2-api-3.1.4.jar" sourcepath="M2_REPO/org/codehaus/woodstox/stax2-api/3.1.4/stax2-api-3.1.4-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/codehaus/woodstox/woodstox-core-asl/4.4.1/woodstox-core-asl-4.4.1.jar" sourcepath="M2_REPO/org/codehaus/woodstox/woodstox-core-asl/4.4.1/woodstox-core-asl-4.4.1-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/slf4j/jcl-over-slf4j/1.7.7/jcl-over-slf4j-1.7.7.jar" sourcepath="M2_REPO/org/slf4j/jcl-over-slf4j/1.7.7/jcl-over-slf4j-1.7.7-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/log4j/log4j/1.2.16/log4j-1.2.16.jar" sourcepath="M2_REPO/log4j/log4j/1.2.16/log4j-1.2.16-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/apache/jena/jena-fuseki-server/2.4.0/jena-fuseki-server-2.4.0.jar" sourcepath="M2_REPO/org/apache/jena/jena-fuseki-server/2.4.0/jena-fuseki-server-2.4.0-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/noggit/noggit/0.7/noggit-0.7.jar" sourcepath="M2_REPO/org/noggit/noggit/0.7/noggit-0.7-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/apache/zookeeper/zookeeper/3.4.5/zookeeper-3.4.5.jar" sourcepath="M2_REPO/org/apache/zookeeper/zookeeper/3.4.5/zookeeper-3.4.5-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/slf4j/slf4j-log4j12/1.6.1/slf4j-log4j12-1.6.1.jar" sourcepath="M2_REPO/org/slf4j/slf4j-log4j12/1.6.1/slf4j-log4j12-1.6.1-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/jline/jline/0.9.94/jline-0.9.94.jar" sourcepath="M2_REPO/jline/jline/0.9.94/jline-0.9.94-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/jboss/netty/netty/3.2.2.Final/netty-3.2.2.Final.jar" sourcepath="M2_REPO/org/jboss/netty/netty/3.2.2.Final/netty-3.2.2.Final-sources.jar"/>
 </classpath>

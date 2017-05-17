@@ -44,6 +44,7 @@ import com.day.cq.tagging.TagManager;
 import com.day.cq.wcm.api.Page;
 import com.example.core.GetDamAssets;
 import com.example.core.Searching;
+import com.example.core.SolrConnection;
 import com.example.core.UploadingAsset;
 
 @Component
@@ -73,25 +74,19 @@ public class ReplicationContent  implements EventHandler{
             ResourceResolver rr = null;
             
 			try {
-				rr = rrf.getAdministrativeResourceResolver(null);
-				GetDamAssets da = new GetDamAssets();
-				da.getAsset(rrf);
-				UploadingAsset ua =new UploadingAsset();
 				
-				String x = ua.uploadingSingleAsset(rrf);
+				rr = rrf.getAdministrativeResourceResolver(null);
+				SolrConnection sc= new SolrConnection();
+			sc.addDocument();
+				//GetDamAssets da = new GetDamAssets();
+				//da.getAsset(rrf);
+				//UploadingAsset ua =new UploadingAsset();
+				
+				//String x = ua.uploadingSingleAsset(rrf);
 				//ua.uploadingMultipleAsset(rrf);
 				session =rr.adaptTo(Session.class);
 				 
 			} catch (LoginException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			} catch (PathNotFoundException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			} catch (RepositoryException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			} catch (FileNotFoundException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}

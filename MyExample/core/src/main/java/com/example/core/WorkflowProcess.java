@@ -7,6 +7,7 @@ import org.apache.felix.scr.annotations.Properties;
 import org.apache.felix.scr.annotations.Property;
 import org.apache.felix.scr.annotations.Service;
 import org.apache.sling.api.resource.ResourceResolver;
+import org.apache.solr.common.SolrDocument;
 
 import com.adobe.granite.workflow.WorkflowException;
 import com.adobe.granite.workflow.WorkflowSession;
@@ -34,6 +35,7 @@ public class WorkflowProcess implements com.adobe.granite.workflow.exec.Workflow
 		Session sess = arg1.adaptTo(Session.class);
 		MetaDataMap mp =arg2;
 		String ar =  arg2.get("PROCESS_ARGS",String.class);
+		
 	
 	}
 
