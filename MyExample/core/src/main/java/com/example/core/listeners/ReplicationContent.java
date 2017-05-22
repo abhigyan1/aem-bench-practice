@@ -30,6 +30,7 @@ import org.apache.sling.api.resource.Resource;
 import org.apache.sling.api.resource.ResourceResolver;
 import org.apache.sling.api.resource.ResourceResolverFactory;
 import org.apache.sling.api.resource.ValueMap;
+import org.apache.sling.commons.json.JSONException;
 import org.osgi.framework.BundleContext;
 import org.osgi.service.component.ComponentContext;
 import org.osgi.service.event.Event;
@@ -44,7 +45,7 @@ import com.day.cq.tagging.TagManager;
 import com.day.cq.wcm.api.Page;
 import com.example.core.GetDamAssets;
 import com.example.core.Searching;
-import com.example.core.SolrConnection;
+import com.example.core.SolrOperations;
 import com.example.core.UploadingAsset;
 
 @Component
@@ -76,8 +77,10 @@ public class ReplicationContent  implements EventHandler{
 			try {
 				
 				rr = rrf.getAdministrativeResourceResolver(null);
-				SolrConnection sc= new SolrConnection();
-			sc.addDocument();
+				resource =	rr.getResource(action.getPath());
+				SolrOperations sc= new SolrOperations();
+		//	sc.addDocument(resource);
+			sc.updateDocumentAndBoostingDocument();
 				//GetDamAssets da = new GetDamAssets();
 				//da.getAsset(rrf);
 				//UploadingAsset ua =new UploadingAsset();
