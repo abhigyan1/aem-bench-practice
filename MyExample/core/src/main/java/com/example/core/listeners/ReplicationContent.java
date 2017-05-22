@@ -1,6 +1,5 @@
 package com.example.core.listeners;
 
-import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
@@ -11,7 +10,6 @@ import javax.jcr.AccessDeniedException;
 import javax.jcr.InvalidItemStateException;
 import javax.jcr.ItemExistsException;
 import javax.jcr.Node;
-import javax.jcr.PathNotFoundException;
 import javax.jcr.ReferentialIntegrityException;
 import javax.jcr.RepositoryException;
 import javax.jcr.Session;
@@ -43,10 +41,8 @@ import com.day.cq.search.QueryBuilder;
 import com.day.cq.tagging.Tag;
 import com.day.cq.tagging.TagManager;
 import com.day.cq.wcm.api.Page;
-import com.example.core.GetDamAssets;
 import com.example.core.Searching;
-import com.example.core.SolrOperations;
-import com.example.core.UploadingAsset;
+import com.example.core.SolrExamples.SolrFactoryClass;
 
 @Component
 @Service
@@ -76,11 +72,16 @@ public class ReplicationContent  implements EventHandler{
             
 			try {
 				
+				
 				rr = rrf.getAdministrativeResourceResolver(null);
 				resource =	rr.getResource(action.getPath());
-				SolrOperations sc= new SolrOperations();
-		//	sc.addDocument(resource);
-			sc.updateDocumentAndBoostingDocument();
+			/*
+			 *	SolrFactoryClass is a factory class which takes argument as either 
+			 *	update the documents from Solr "update" 
+			 * 	Adding the documents to Solr	"add"
+			 */
+				
+				SolrFactoryClass sfc= new SolrFactoryClass("update", resource);
 				//GetDamAssets da = new GetDamAssets();
 				//da.getAsset(rrf);
 				//UploadingAsset ua =new UploadingAsset();
@@ -90,6 +91,9 @@ public class ReplicationContent  implements EventHandler{
 				session =rr.adaptTo(Session.class);
 				 
 			} catch (LoginException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (JSONException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
