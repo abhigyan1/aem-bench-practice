@@ -1,5 +1,6 @@
 package com.example.core.listeners;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
@@ -16,7 +17,7 @@ import javax.jcr.Session;
 import javax.jcr.lock.LockException;
 import javax.jcr.nodetype.ConstraintViolationException;
 import javax.jcr.nodetype.NoSuchNodeTypeException;
-import javax.jcr.version.VersionException;
+import javax.jcr.version.VersionException; 
 
 import org.apache.felix.scr.annotations.Component;
 import org.apache.felix.scr.annotations.Property;
@@ -29,6 +30,7 @@ import org.apache.sling.api.resource.ResourceResolver;
 import org.apache.sling.api.resource.ResourceResolverFactory;
 import org.apache.sling.api.resource.ValueMap;
 import org.apache.sling.commons.json.JSONException;
+import org.apache.solr.client.solrj.SolrServerException;
 import org.osgi.framework.BundleContext;
 import org.osgi.service.component.ComponentContext;
 import org.osgi.service.event.Event;
@@ -42,12 +44,17 @@ import com.day.cq.tagging.Tag;
 import com.day.cq.tagging.TagManager;
 import com.day.cq.wcm.api.Page;
 import com.example.core.Searching;
+import com.example.core.SolrExamples.Operations;
 import com.example.core.SolrExamples.SolrFactoryClass;
 
 @Component
 @Service
+
+
 @Property(name="event.topics",value= ReplicationAction.EVENT_TOPIC)
 public class ReplicationContent  implements EventHandler{
+	/*@Reference 
+	SolrFactoryClass sfc;*/
 	 private BundleContext bundleContext;
 	 private Logger log = LoggerFactory.getLogger(this.getClass());
 	 @Reference
@@ -69,31 +76,40 @@ public class ReplicationContent  implements EventHandler{
 			 log.info("hello");
             log.info("Replication action {} occured on {} ", action.getType().getName(), action.getPath());
             ResourceResolver rr = null;
-            
+          
 			try {
 				
 				
 				rr = rrf.getAdministrativeResourceResolver(null);
 				resource =	rr.getResource(action.getPath());
+				
 			/*
 			 *	SolrFactoryClass is a factory class which takes argument as either 
 			 *	update the documents from Solr "update" 
 			 * 	Adding the documents to Solr	"add"
 			 */
-				
-				SolrFactoryClass sfc= new SolrFactoryClass("update", resource);
+			//sfc.SolrFactoryMethods("add", resource);
+				SolrFactoryClass sfc= new SolrFactoryClass("get",resource);
+						
+						
 				//GetDamAssets da = new GetDamAssets();
 				//da.getAsset(rrf);
 				//UploadingAsset ua =new UploadingAsset();
 				
 				//String x = ua.uploadingSingleAsset(rrf);
 				//ua.uploadingMultipleAsset(rrf);
-				session =rr.adaptTo(Session.class);
+				
 				 
 			} catch (LoginException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			} catch (JSONException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (SolrServerException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
@@ -107,7 +123,7 @@ public class ReplicationContent  implements EventHandler{
 				
 			Tag[] tago=	tgmr.getTags(resource);
 		
-			
+			session= rr.adaptTo(Session.class);
 			
 			//tago is empty array
 			Page page = resource.adaptTo(Page.class);

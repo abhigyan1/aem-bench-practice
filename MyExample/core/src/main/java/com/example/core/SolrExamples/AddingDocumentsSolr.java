@@ -15,20 +15,22 @@ import org.apache.sling.commons.json.jcr.JsonItemWriter;
 import org.apache.solr.client.solrj.SolrServerException;
 import org.apache.solr.client.solrj.impl.HttpSolrClient;
 import org.apache.solr.common.SolrInputDocument;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 
 public class AddingDocumentsSolr implements Operations{
 	
-	
+	 private Logger log = LoggerFactory.getLogger(this.getClass());
 	@Override
 	public void operationsOnSolr(Resource resource) throws JSONException {
-
+		
 
 
 		 final String urlString = "http://localhost:8983/solr/cricket";
 		 
 		HttpSolrClient solrServer = new HttpSolrClient(urlString);
-		
+		log.info("solrServer is at"+solrServer);
 		 SolrInputDocument doc = new SolrInputDocument();
 		 //Get some content from AEM and kickass by converting data into json
 		 Node node =resource.adaptTo(Node.class);
